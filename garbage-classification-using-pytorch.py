@@ -71,4 +71,9 @@ if __name__ == '__main__':
     # image, label = next(iter(train_loader))
     # print(label)
     # print(image.shape)
-    print("test")
+    # print("test")
+
+    # 模型初始化
+    model_name = args.model_name
+    num_class = args.num_classes
+    initital_model(model_name, num_class, feature_extract=True)
