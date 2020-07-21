@@ -1,9 +1,5 @@
 from flask import current_app, json
 """
-
-作者: 沈福利
-博客: https://blog.csdn.net/shenfuli
-联系QQ：1121025745
 功能：关于flask的jsonify序列化dict后的结果会自动根据key的下标升序排列,
 希望dict原样返回的方法【重写jsonify方法】
 
