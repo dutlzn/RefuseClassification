@@ -11,7 +11,7 @@ from args import args
 ## 数据的预处理
 from transform import preprocess
 ## 模型pre_trained_model 加载、训练、评估、标签映射关系
-from model import train, evaluate, initital_model, class_idname
+from model import train, evaluate, initital_model, class_id2name
 ## 工具类： 日志类工具类、模型保存、优化器 （别人提供的 需要重写）
 from utils.logger import Logger 
 from utils.misc import save_checkpoint, get_optimizer
@@ -64,7 +64,22 @@ val_loader = torch.utils.data.DataLoader(
 
 # 5 定义模型训练和验证方法
 
-
+def run(model, train_loader, val_loader):
+    '''
+    模型训练和预测
+    :param model: 初始化的model
+    :param train_loader: 训练数据
+    :param val_loader: 验证数据
+    :return:
+    '''
+    ## 加载checkpoint: 断点续传，可以指定迭代的开始位置进行重新训练
+    ## 评估：混淆矩阵 准确率 召回率 F1-score
+    ## 模型的训练和验证
+    for epoch in range(1,args.epochs+1):
+        # train
+        # val
+        pass 
+    pass 
 
 # 入口程序
 if __name__ == '__main__':
@@ -76,4 +91,7 @@ if __name__ == '__main__':
     # 模型初始化
     model_name = args.model_name
     num_class = args.num_classes
-    initital_model(model_name, num_class, feature_extract=True)
+    model_ft =  initital_model(model_name, num_class, feature_extract=True)
+
+    # 模型训练和评估
+    run(model_ft, train_loader, val_loader)

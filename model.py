@@ -12,7 +12,7 @@ from utils.eval import accuracy
 from utils.misc import AverageMeter
 import numpy as np
 # 导入进度条库
-from progress.bar import Bar
+# from progress.bar import Bar
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
