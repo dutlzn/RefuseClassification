@@ -27,7 +27,7 @@ parser.add_argument('-c', '--checkpoint', default="checkpoint", type=str, metava
                     help='path to save checkpoint')
 
 ## 模型迭代次数
-parser.add_argument('--epochs', default=2, type=int, metavar='N', help='number of total epochs to run')
+parser.add_argument('--epochs', default=60, type=int, metavar='N', help='number of total epochs to run')
 
 ## 图片分类
 parser.add_argument('--num_classes', default=4, type=int, metavar='N', help='number of classes')
